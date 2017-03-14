@@ -1,0 +1,17 @@
+package com.sarvex.landon.data.repository;
+
+import com.sarvex.landon.data.entity.Reservation;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.sql.Date;
+import java.util.List;
+
+/**
+ * Created by Sarvex on 13/03/2017.
+ */
+
+@Repository
+public interface ReservationRepository extends CrudRepository<Reservation, Long> {
+  List<Reservation> findByDate(Date date);
+}
